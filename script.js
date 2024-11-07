@@ -10,8 +10,14 @@ function setSize (gridSize) {
         div.style.cssText = `width : ${cellSize}px; height : ${cellSize}px;border:1px solid black`;
         div.addEventListener('mouseover', () => {
             div.style.backgroundColor = "black";
-        })
+        });
         container.appendChild(div);
     }
-};
+}
 setSize(gridSize);
+clearButton.addEventListener('click', () => {
+    const cells = document.querySelectorAll('#container div')
+    cells.forEach(cell => {
+        cell.style.backgroundColor = 'white';
+    });
+});

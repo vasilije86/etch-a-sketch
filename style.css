@@ -34,3 +34,6 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
+#container div{
+    box-sizing: border-box;
+}
