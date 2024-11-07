@@ -24,14 +24,14 @@ clearButton.addEventListener('click', () => {
 sizeButton.addEventListener('click', () =>{
     let newSize = parseInt(prompt("Enter a new grid size"));
     if (newSize && newSize > 0 && newSize <= 100) {
-        setSize(newSize)
+        setSize(newSize);
     } else {
-        alert("Please enter a valid number between 1 and 100")
+        alert("Please enter a valid number between 1 and 100");
     }
 });
 function randomRGB() {
-    const r = Math.floor(Math.random() * 256)
-    const g = Math.floor(Math.random() * 256)
-    const b = Math.floor(Math.random() * 256)
-    return `rgb(${r},${g},${b})`
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r},${g},${b})`;
 }
