@@ -9,7 +9,7 @@ function setSize (gridSize) {
         const div  = document.createElement('div');
         div.style.cssText = `width : ${cellSize}px; height : ${cellSize}px;border:1px solid black`;
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = "black";
+            div.style.backgroundColor = randomRGB();
         });
         container.appendChild(div);
     }
@@ -29,3 +29,9 @@ sizeButton.addEventListener('click', () =>{
         alert("Please enter a valid number between 1 and 100")
     }
 });
+function randomRGB() {
+    const r = Math.floor(Math.random() * 256)
+    const g = Math.floor(Math.random() * 256)
+    const b = Math.floor(Math.random() * 256)
+    return `rgb(${r},${g},${b})`
+}
