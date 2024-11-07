@@ -21,3 +21,11 @@ clearButton.addEventListener('click', () => {
         cell.style.backgroundColor = 'white';
     });
 });
+sizeButton.addEventListener('click', () =>{
+    let newSize = parseInt(prompt("Enter a new grid size"));
+    if (newSize && newSize > 0 && newSize <= 100) {
+        setSize(newSize)
+    } else {
+        alert("Please enter a valid number between 1 and 100")
+    }
+});
